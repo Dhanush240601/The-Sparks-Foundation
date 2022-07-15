@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="SDbank1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+    <title>Responsive Menu</title>
+<style type="text/css">
+        #bg {
+          position: fixed; 
+          top: -50%; 
+          left: -50%; 
+          width: 200%; 
+          height: 200%;
+      }
+      #bg img {
+          position: absolute; 
+          top: 0; 
+          left: 0; 
+          right: 0; 
+          bottom: 0; 
+          margin: auto; 
+          min-width: 50%;
+          min-height: 50%;
+      }
+	  .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.centered {
+  position: absolute;
+  top: 40%;
+  left:50%;
+  font-size:45px;
+  transform: translate(-50%, -50%);
+}
+  </style>
+
+</head>
+<body>
+<div id="bg">
+  <img src="https://i.pinimg.com/564x/f8/01/de/f801de4fd2a00e33bccf6f308ffbcde4.jpg" alt="">
+</div>
+
+<div class="centered" style="color:#2C3E89"> <strong>
+<pre>WELCOME TO SD
+    BANK!</pre></strong></div>
+</div>
+    <nav>
+        <div class="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="file:///C:/SD%20BANK/SDpage2.html">View  All Customers</a></li>
+            <li><a href="#">Send Money</a></li>
+            <li><a href="#">Contact</a></li>
+	    <li><a href="#">About us</a></li>
+        </ul>
+    </nav>
+    <script>
+        var toggle = document.querySelector('i');
+        var unorder = document.querySelector('ul');
+        toggle.onclick = function(){
+            var classname = unorder.className;
+            classname = 'inactive';
+            if (classname){
+                unorder.className = 'inactive';
+            }
+            else{
+                unorder.className = 'active';
+            }
+        };
+
+        window.addEventListener('scroll',function(){
+            if(window.pageYOffset > 400){
+                document.querySelector('nav').style.backgroundColor='pink'
+            }
+            else if(window.pageYOffset < 400){
+                document.querySelector('nav').style.backgroundColor='rgb(14, 19, 95)'
+            }
+        });
+    </script>
+</body>
+</html>
